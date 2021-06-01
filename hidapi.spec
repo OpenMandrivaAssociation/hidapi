@@ -69,6 +69,8 @@ It is most useful when used with custom (Vendor-Defined) HID devices.
 %install
 %make_install
 
+rm -rf %{buildroot}%{_datadir}/doc/%{name}
+
 %files -n %{devname}
 %defattr(-,root,root)
 %doc README.md AUTHORS.txt HACKING.txt
