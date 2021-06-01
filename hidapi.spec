@@ -61,6 +61,7 @@ It is most useful when used with custom (Vendor-Defined) HID devices.
 
 
 %build
+./bootstrap
 %configure --disable-static
 %make_build
 
