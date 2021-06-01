@@ -1,7 +1,7 @@
 %define major 0
 
 %define libname	%mklibname %{name} %{major}
-%define libusbname	%mklibname %{name}-libusb %{major}
+%define libusbname %mklibname %{name}-libusb %{major}
 %define devname	%mklibname -d %{name}
 
 Name:           hidapi
@@ -47,7 +47,7 @@ HIDAPI is a library which allows an application to interface with USB and Blueto
 While it can be used to communicate with standard HID devices like keyboards, mice, and Joysticks.
 It is most useful when used with custom (Vendor-Defined) HID devices.
 
-%package -n %package -n %{libusbname}
+%package -n %{libusbname}
 Summary:        Simple library for communicating with USB and Bluetooth HID devices
 Group:          System/Libraries
 
