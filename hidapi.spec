@@ -57,7 +57,7 @@ While it can be used to communicate with standard HID devices like keyboards, mi
 It is most useful when used with custom (Vendor-Defined) HID devices.
 
 %prep
-%autosetup -p1 -q -n %{name}-%{name}-%{version}
+%autosetup -p1 %{name}-%{name}-%{version}
 
 
 %build
