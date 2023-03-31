@@ -6,7 +6,7 @@
 
 Name:           hidapi
 Version:        0.10.1
-Release:        1
+Release:        2
 Summary:        Simple library for communicating with USB and Bluetooth HID devices
 License:        GPL-3.0 or BSD-3-Clause
 Group:          System/Libraries
