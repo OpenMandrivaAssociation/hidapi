@@ -6,15 +6,13 @@
 
 Name:           hidapi
 Version:        0.14.0
-Release:        1
+Release:        2
 Summary:        Simple library for communicating with USB and Bluetooth HID devices
 License:        GPL-3.0 or BSD-3-Clause
 Group:          System/Libraries
 URL:            https://github.com/libusb/hidapi
 Source:         https://github.com/libusb/hidapi/archive/%{name}-%{name}-%{version}.tar.gz
-BuildRequires:  autoconf
-BuildRequires:  automake
-BuildRequires:  libtool
+BuildRequires:  cmake
 BuildRequires:  pkgconfig(libusb-1.0)
 BuildRequires:  pkgconfig(libudev)
 
@@ -61,12 +59,11 @@ It is most useful when used with custom (Vendor-Defined) HID devices.
 %autopatch -p1
 
 %build
-./bootstrap
-%configure --disable-static
+%cmake
 %make_build
 
 %install
-%make_install
+%make_install -C build
 
 rm -rf %{buildroot}%{_datadir}/doc/%{name}
 
@@ -76,6 +73,7 @@ rm -rf %{buildroot}%{_datadir}/doc/%{name}
 %{_includedir}/hidapi
 %{_libdir}/pkgconfig/*
 %{_libdir}/libhidapi-*.so
+%{_libdir}/cmake/hidapi/
 
 %files -n %{libname}
 %defattr(-,root,root)
