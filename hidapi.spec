@@ -12,7 +12,6 @@ License:        GPL-3.0 or BSD-3-Clause
 Group:          System/Libraries
 URL:            https://github.com/libusb/hidapi
 Source:         https://github.com/libusb/hidapi/archive/%{name}-%{name}-%{version}.tar.gz
-Patch0:         fix-ftbfs-autoconf-2.70.patch
 BuildRequires:  autoconf
 BuildRequires:  automake
 BuildRequires:  libtool
