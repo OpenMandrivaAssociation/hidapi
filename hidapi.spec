@@ -73,6 +73,7 @@ rm -rf %{buildroot}%{_datadir}/doc/%{name}
 %{_includedir}/hidapi
 %{_libdir}/pkgconfig/*
 %{_libdir}/libhidapi-*.so
+%{_libdir}/cmake/hidapi/
 
 %files -n %{libname}
 %defattr(-,root,root)
