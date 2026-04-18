@@ -13,6 +13,7 @@ Group:          System/Libraries
 URL:            https://github.com/libusb/hidapi
 Source:         https://github.com/libusb/hidapi/archive/%{name}-%{name}-%{version}.tar.gz
 BuildRequires:  cmake
+BuildRequires:  make
 BuildRequires:  pkgconfig(libusb-1.0)
 BuildRequires:  pkgconfig(libudev)
 
